@@ -61,9 +61,7 @@
     xserver = {
       enable = true;
 
-      # Enable the GNOME Desktop Environment.
       displayManager.gdm.enable = true;
-      # desktopManager.gnome.enable = true;
 
       windowManager.awesome = {
       	enable = true;
@@ -124,9 +122,6 @@
   };
 
 
-  # services.displayManager.sddm.enable = true; 
-  # programs.hyprland.xwayland.enable = true;
-  # programs.hyprland.enable = true;
   security.polkit.enable = true;
 
 
@@ -149,6 +144,7 @@
     alacritty
     zoxide
     starship
+    nitrogen
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.sauce-code-pro
