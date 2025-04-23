@@ -1,0 +1,7 @@
+
+[font]
+normal.family = "SauceCodePro Nerd Font Mono"
+
+[terminal]
+shell = "fish"
+
