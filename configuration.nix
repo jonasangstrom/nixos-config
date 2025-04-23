@@ -142,7 +142,6 @@
   environment.systemPackages = with pkgs; [
     neovim 
     wget
-    kitty
     rofi
     neofetch 
     git
