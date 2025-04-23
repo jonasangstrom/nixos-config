@@ -45,17 +45,45 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+  hardware.graphics = {
+    enable = true;
+    extraPackages = with pkgs; [
+      vpl-gpu-rt
+      libvdpau-va-gl
+      intel-media-driver
+      intel-compute-runtime
+    ];
+  };
+
+
+  services = {
   # Enable the X11 windowing system.
-  services.xserver.enable = true;
+    xserver = {
+      enable = true;
 
-  # Enable the GNOME Desktop Environment.
-  services.xserver.displayManager.gdm.enable = true;
-  services.xserver.desktopManager.gnome.enable = true;
+      # Enable the GNOME Desktop Environment.
+      displayManager.gdm.enable = true;
+      desktopManager.gnome.enable = true;
 
-  # Configure keymap in X11
-  services.xserver.xkb = {
-    layout = "se";
-    variant = "";
+      windowManager.awesome = {
+      	enable = true;
+	luaModules = with pkgs.luaPackages; [
+	  luarocks
+	  luadbi-mysql
+	];
+      };
+
+    # Configure keymap in X11
+      xkb = {
+        layout = "se";
+        variant = "";
+      };
+      resolutions = [{x=1920; y=1080;}];
+    };
+    # displayManager = {
+    #  sddm.enable=true;
+    #  defaultSession="none+awesome";
+    #};
   };
 
   # Configure console keymap
@@ -65,7 +93,6 @@
   services.printing.enable = true;
 
   # Enable sound with pipewire.
-  hardware.pulseaudio.enable = false;
   security.rtkit.enable = true;
   services.pipewire = {
     enable = true;
@@ -94,12 +121,16 @@
   };
 
   # Install firefox.
-  programs.firefox.enable = true;
+
+  programs = {
+    firefox.enable = true;
+    fish.enable = true;
+  };
 
 
   # services.displayManager.sddm.enable = true; 
-  programs.hyprland.xwayland.enable = true;
-  programs.hyprland.enable = true;
+  # programs.hyprland.xwayland.enable = true;
+  # programs.hyprland.enable = true;
   security.polkit.enable = true;
 
 
@@ -113,13 +144,17 @@
   # List packages installed in system profile. To search, run:
   # $ nix search wget
   environment.systemPackages = with pkgs; [
-    neovim # Do not forget to add an editor to edit configuration.nix! The Nano editor is also installed by default.
+    neovim 
     wget
     kitty
     rofi-wayland 
     neofetch 
     git
-    # zoxide
+    home-manager
+    alacritty
+    zoxide
+    nerd-fonts.sauce-code-pro
+    starship
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
