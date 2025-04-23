@@ -80,10 +80,6 @@
       };
       resolutions = [{x=1920; y=1080;}];
     };
-    # displayManager = {
-    #  sddm.enable=true;
-    #  defaultSession="none+awesome";
-    #};
   };
 
   # Configure console keymap
@@ -147,14 +143,16 @@
     neovim 
     wget
     kitty
-    rofi-wayland 
+    rofi
     neofetch 
     git
     home-manager
     alacritty
     zoxide
-    nerd-fonts.sauce-code-pro
     starship
+  ];
+  fonts.packages = with pkgs; [
+    nerd-fonts.sauce-code-pro
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
