@@ -311,7 +311,7 @@ globalkeys = gears.table.join(
               {description = "restore minimized", group = "client"}),
 
     -- Prompt
-    awful.key({modkey}, "e", function()
+    awful.key({modkey}, "r", function()
     awful.spawn.with_shell("rofi -show drun &>> /tmp/rofi.log")
     end, { ... } ),
 
