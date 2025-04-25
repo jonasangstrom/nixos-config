@@ -2,7 +2,7 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, ... }:
+{ config, pkgs, nvim, ... }:
 
 {
   imports =
@@ -134,24 +134,29 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages = with pkgs; [
-    neovim 
-    wget
-    rofi
-    neofetch 
-    git
-    home-manager
-    alacritty
-    zoxide
-    starship
-    nitrogen
+  environment.systemPackages =  [
+    nvim.packages.x86_64-linux.default
+    pkgs.wget
+    pkgs.rofi
+    pkgs.neofetch 
+    pkgs.git
+    pkgs.alacritty
+    pkgs.zoxide
+    pkgs.starship
+    pkgs.nitrogen
+    pkgs.gcc
+    pkgs.fzf
+    pkgs.ripgrep
+    pkgs.cmake
+    pkgs.gnumake
+    pkgs.fd
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.sauce-code-pro
   ];
 
   # Some programs need SUID wrappers, can be configured further or are
-  # started in user sessions.
+  # started in user session.
   # programs.mtr.enable = true;
   # programs.gnupg.agent = {
   #   enable = true;

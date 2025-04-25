@@ -3,15 +3,16 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    home-manager.url = "github:nix-community/home-manager";
-    home-manager.inputs.nixpkgs.follows = "nixpkgs";
+    nvim.url = "nvim/";
   };
 
-  outputs = { nixpkgs, ... } @ inputs: {
+  outputs = { nixpkgs, nvim, ... } @ inputs: {
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
+      system = "X86_64-linux";
       modules = [
         ./configuration.nix
       ];
+      specialArgs = {inherit nvim;};
     };
   };
 }
