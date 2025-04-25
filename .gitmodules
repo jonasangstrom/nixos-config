@@ -1,0 +1,3 @@
+[submodule "advent_of_neovim"]
+	path = advent_of_neovim
+	url = https://github.com/jonasangstrom/advent_of_neovim.git
