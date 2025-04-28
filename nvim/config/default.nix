@@ -11,7 +11,6 @@
     imports = [
 	./options.nix
 	./lsps.nix
-	./telescope.nix
-	./oil.nix
+	./plugins.nix
     ];
 }
