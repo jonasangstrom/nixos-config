@@ -136,6 +136,7 @@
   # $ nix search wget
   environment.systemPackages =  [
     nvim.packages.x86_64-linux.default
+    pkgs.tmux
     pkgs.wget
     pkgs.rofi
     pkgs.neofetch 
