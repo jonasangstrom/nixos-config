@@ -5,9 +5,6 @@
 	maplocalleader =  " ";
     };
     colorschemes.catppuccin.enable = true;
-    plugins.lualine.enable = true;
-    plugins.web-devicons.enable = true;
-    plugins.fugitive.enable = true;
     imports = [
 	./options.nix
 	./lsps.nix
