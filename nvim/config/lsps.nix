@@ -4,9 +4,16 @@
 	    enable = true;
 	    inlayHints = true;
 	    keymaps = {
+		diagnostic = {
+		    "<leader>n" = "goto_next";
+		    "<leader>N" = "goto_prev";
+		};
 		lspBuf = {
 		    "gd" = "definition";
-		    "rn" = "ename";
+		    "gD" = "references";
+		    "rn" = "rename";
+		    "K" = "hover";
+		    "gi" = "implementation";
 		};
 	    };
 	    servers = {
