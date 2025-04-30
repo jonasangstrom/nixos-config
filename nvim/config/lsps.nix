@@ -1,5 +1,9 @@
 {
     plugins = {
+	lsp-format = {
+	    enable = true;
+	    lspServersToEnable = "all";
+	};
 	lsp = {
 	    enable = true;
 	    inlayHints = true;
@@ -26,7 +30,6 @@
 		lua_ls.enable = true;
 		pyright.enable = true;
             };
-	    
 	};
     };
 }
