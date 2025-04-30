@@ -5,5 +5,6 @@
 	./telescope.nix
 	./oil.nix
 	./fugitive.nix
+	./treesitter.nix
     ];
 }

@@ -9,6 +9,5 @@
 	./options.nix
 	./lsps.nix
 	./plugins.nix
-	./treesitter.nix
     ];
 }
