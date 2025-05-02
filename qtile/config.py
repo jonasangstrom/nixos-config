@@ -146,7 +146,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper = "~/wallpapers/wallpaper.jpg",
+        wallpaper = "~/wallpapers/jwallpaper.jpg",
         wallpaper_mode = "fill",
         bottom=bar.Bar(
             [
