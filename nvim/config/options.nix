@@ -6,5 +6,6 @@
 	wrap = false;
 	spell = true;
 	smartcase = true;
+	clipboard = "unnamedplus";
     };
 }
