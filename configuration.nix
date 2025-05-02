@@ -63,13 +63,8 @@
 
       displayManager.gdm.enable = true;
 
-      windowManager.awesome = {
-      	enable = true;
-	luaModules = with pkgs.luaPackages; [
-	  luarocks
-	  luadbi-mysql
-	];
-      };
+
+      windowManager.qtile.enable = true;
 
     # Configure keymap in X11
       xkb = {
@@ -144,7 +139,6 @@
     pkgs.alacritty
     pkgs.zoxide
     pkgs.starship
-    pkgs.nitrogen
     pkgs.gcc
     pkgs.fzf
     pkgs.ripgrep
@@ -165,6 +159,7 @@
   # };
 
   # List services that you want to enable:
+    services.picom.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;

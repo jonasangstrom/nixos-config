@@ -2,6 +2,9 @@
 [font]
 normal.family = "SauceCodePro Nerd Font Mono"
 
+[window]
+opacity = 0.9
+
 [terminal]
 shell = "fish"
 
