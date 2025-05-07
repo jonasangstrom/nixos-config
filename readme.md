@@ -1,4 +1,5 @@
 # My config for nixos
+sudo nixos-rebuild switch --flake . --impure
 
 ## TODO:
 - add tmux config
