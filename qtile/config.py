@@ -28,6 +28,11 @@ from libqtile import bar, layout, qtile, widget
 from libqtile.config import Click, Drag, Group, Key, Match, Screen
 from libqtile.lazy import lazy
 from libqtile.utils import guess_terminal
+from libqtile.backend.wayland import InputConfig
+
+wl_input_rules = {
+    "kb_layout": "XKB_DEFAULT_LAYOUT"
+}
 
 mod = "mod4"
 terminal = guess_terminal()
@@ -146,7 +151,7 @@ extension_defaults = widget_defaults.copy()
 
 screens = [
     Screen(
-        wallpaper = "wallpaper.jpg",
+        wallpaper = "~/.config/wallpaper.jpg",
         wallpaper_mode = "fill",
         bottom=bar.Bar(
             [
