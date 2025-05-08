@@ -44,6 +44,11 @@
     LC_TIME = "sv_SE.UTF-8";
   };
 
+  hardware = {
+    opengl.enable=true;
+    nvidia.modesetting.enable=true;
+  };
+
   hardware.graphics = {
     enable = true;
     extraPackages = with pkgs; [
@@ -61,6 +66,7 @@
       enable = true;
 
       displayManager.gdm.enable = true;
+
 
 
       windowManager.qtile.enable = true;
@@ -113,15 +119,14 @@
   programs = {
     firefox.enable = true;
     fish.enable = true;
+    hyprland = {
+	enable=true;
+	xwayland.enable=true;
+    };
   };
 
 
   security.polkit.enable = true;
-
-
-
-
-  
 
   # Allow unfree packages
   nixpkgs.config.allowUnfree = true;
@@ -144,6 +149,9 @@
     pkgs.cmake
     pkgs.gnumake
     pkgs.fd
+    pkgs.kitty
+    pkgs.swww
+    pkgs.waybar
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.sauce-code-pro
