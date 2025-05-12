@@ -152,6 +152,7 @@
     pkgs.kitty
     pkgs.swww
     pkgs.waybar
+    pkgs.hyprpaper
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.sauce-code-pro
