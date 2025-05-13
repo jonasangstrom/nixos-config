@@ -66,17 +66,14 @@
       enable = true;
 
       displayManager.gdm.enable = true;
-
-
-
-      windowManager.qtile.enable = true;
+	    #windowManager.qtile.enable = true;
 
     # Configure keymap in X11
       xkb = {
         layout = "se";
         variant = "";
       };
-      resolutions = [{x=1920; y=1080;}];
+	    #resolutions = [{x=1920; y=1080;}];
     };
   };
 
@@ -167,7 +164,7 @@
   # };
 
   # List services that you want to enable:
-    services.picom.enable = true;
+    #services.picom.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
