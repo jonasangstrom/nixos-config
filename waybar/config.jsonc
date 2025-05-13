@@ -17,20 +17,20 @@
     ],
     "modules-right": [
         "mpd",
-        "idle_inhibitor",
+        //"idle_inhibitor",
         "pulseaudio",
         "network",
-        "power-profiles-daemon",
-        "cpu",
-        "memory",
-        "temperature",
-        "backlight",
-        "keyboard-state",
-        "hyprland/language",
+        //"power-profiles-daemon",
+        //"cpu",
+        //"memory",
+        //"temperature",
+        //"backlight",
+        //"keyboard-state",
+        //"hyprland/language",
         "battery",
-        "battery#bat2",
+        //"battery#bat2",
         "clock",
-        "tray",
+        //"tray",
         "custom/power"
     ],
     // Modules configuration
@@ -111,6 +111,7 @@
         // }
     },
     "clock": {
+	"intervall": 5,
         // "timezone": "America/New_York",
         "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
         "format-alt": "{:%Y-%m-%d}"
@@ -136,14 +137,15 @@
         "format-icons": ["", "", "", "", "", "", "", "", ""]
     },
     "battery": {
+        "interval": 5,
         "states": {
             // "good": 95,
             "warning": 30,
             "critical": 15
         },
-        "format": "{capacity}% {icon}",
-        "format-full": "{capacity}% {icon}",
-        "format-charging": "{capacity}% ",
+        "format": "{icon}",
+        "format-full": "{icon}",
+        "format-charging": "{capacity}% 󰂄",
         "format-plugged": "{capacity}% ",
         "format-alt": "{time} {icon}",
         // "format-good": "", // An empty format will hide the module
