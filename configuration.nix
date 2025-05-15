@@ -65,7 +65,12 @@
     xserver = {
       enable = true;
 
-      displayManager.gdm.enable = true;
+      displayManager.sddm = {
+	    enable = true;
+	    theme = "catppuccin-mocha";
+	    package = pkgs.kdePackages.sddm;
+	    };
+	    #displayManager.gdm.enable = true;
 	    #windowManager.qtile.enable = true;
 
     # Configure keymap in X11
@@ -134,7 +139,7 @@
     nvim.packages.x86_64-linux.default
     pkgs.tmux
     pkgs.wget
-    pkgs.rofi
+    pkgs.rofi-wayland
     pkgs.neofetch 
     pkgs.git
     pkgs.alacritty
@@ -150,6 +155,16 @@
     pkgs.swww
     pkgs.waybar
     pkgs.hyprpaper
+    (
+    pkgs.catppuccin-sddm.override {
+	flavor = "mocha";
+	font  = "Noto Sans";
+	fontSize = "9";
+		#background = "${./wallpaper.png}";
+	loginBackground = true;
+    }
+    )
+	#pkgs.kdePackages.qtmultimedia
   ];
   fonts.packages = with pkgs; [
     nerd-fonts.sauce-code-pro
