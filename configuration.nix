@@ -45,7 +45,6 @@
   };
 
   hardware = {
-    opengl.enable=true;
     nvidia.modesetting.enable=true;
   };
 
@@ -62,14 +61,15 @@
 
   services = {
   # Enable the X11 windowing system.
-    xserver = {
-      enable = true;
 
       displayManager.sddm = {
 	    enable = true;
 	    theme = "catppuccin-mocha";
 	    package = pkgs.kdePackages.sddm;
 	    };
+    xserver = {
+      enable = true;
+
 	    #displayManager.gdm.enable = true;
 	    #windowManager.qtile.enable = true;
 
