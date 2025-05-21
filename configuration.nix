@@ -155,7 +155,7 @@
     pkgs.swww
     pkgs.waybar
     pkgs.hyprpaper
-    pkgs.vivaldi
+    pkgs.wezterm
     (
     pkgs.catppuccin-sddm.override {
 	flavor = "mocha";
