@@ -143,7 +143,6 @@
     pkgs.rofi-wayland
     pkgs.fastfetch
     pkgs.git
-    pkgs.alacritty
     pkgs.zoxide
     pkgs.starship
     pkgs.gcc
@@ -152,7 +151,6 @@
     pkgs.cmake
     pkgs.gnumake
     pkgs.fd
-    pkgs.kitty
     pkgs.swww
     pkgs.waybar
     pkgs.hyprpaper
