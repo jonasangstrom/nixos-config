@@ -141,7 +141,7 @@
     pkgs.tmux
     pkgs.wget
     pkgs.rofi-wayland
-    pkgs.neofetch 
+    pkgs.fastfetch
     pkgs.git
     pkgs.alacritty
     pkgs.zoxide
