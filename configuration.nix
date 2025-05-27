@@ -137,6 +137,7 @@
   # $ nix search wget
   environment.systemPackages =  [
     nvim.packages.x86_64-linux.default
+	pkgs.wl-clipboard
     pkgs.spotify
     pkgs.tmux
     pkgs.wget
