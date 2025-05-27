@@ -9,6 +9,7 @@ config.color_scheme = 'Catppuccin Mocha'
 
 config.window_background_opacity = 0.85
 
+config.leader = { key = 'b', mods = 'CTRL', timeout_milliseconds = 1000 }
 config.keys = {
 	-- This will create a new split and run the `top` program inside it
 	{
