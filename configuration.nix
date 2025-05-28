@@ -10,6 +10,11 @@
 	/etc/nixos/hardware-configuration.nix
     ];
 
+  fileSystems."/mnt/sdb1" =
+    { device = "/dev/disk/by-uuid/b2b71f04-f91f-4173-88c4-4b420c3dbb04";
+      fsType = "ext4";
+    };
+
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
