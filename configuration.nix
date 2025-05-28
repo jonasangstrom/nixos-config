@@ -140,6 +140,7 @@
 	pkgs.wl-clipboard
     pkgs.spotify
     pkgs.tmux
+	pkgs.yazi
     pkgs.wget
     pkgs.rofi-wayland
     pkgs.fastfetch
