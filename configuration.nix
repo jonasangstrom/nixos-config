@@ -121,6 +121,7 @@
   programs = {
     firefox.enable = true;
     fish.enable = true;
+	steam.enable = true;
     hyprland = {
 	enable=true;
 	xwayland.enable=true;
