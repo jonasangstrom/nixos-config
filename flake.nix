@@ -10,7 +10,7 @@
     nixosConfigurations.nixos = nixpkgs.lib.nixosSystem {
       system = "X86_64-linux";
       modules = [
-        ./configuration.nix
+        ./hosts/slaptop/configuration.nix
       ];
       specialArgs = {inherit nvim;};
     };
