@@ -8,6 +8,7 @@
   imports =
     [ 
 	./hardware-configuration.nix
+	./../../nixModules/base.nix
     ];
 
   fileSystems."/mnt/sdb1" =
