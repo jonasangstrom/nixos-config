@@ -1,4 +1,3 @@
 dconf/*
 spotify/*
-hardware-configuration.nix
 pulse/*
