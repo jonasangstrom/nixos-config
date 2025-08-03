@@ -164,6 +164,7 @@
     pkgs.waybar
     pkgs.hyprpaper
     pkgs.wezterm
+	pkgs.freecad-wayland
     (
     pkgs.catppuccin-sddm.override {
 	flavor = "mocha";
