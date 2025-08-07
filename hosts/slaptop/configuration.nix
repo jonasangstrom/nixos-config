@@ -11,10 +11,7 @@
 	./../../nixModules/base.nix
     ];
 
-  fileSystems."/mnt/sdb1" =
-    { device = "/dev/disk/by-uuid/b2b71f04-f91f-4173-88c4-4b420c3dbb04";
-      fsType = "ext4";
-    };
+  
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -207,5 +204,6 @@
   # Before changing this value read the documentation for this option
   # (e.g. man configuration.nix or on https://nixos.org/nixos/options.html).
   system.stateVersion = "24.11"; # Did you read the comment?
-
+  system.autoUpgrade.enable = true;
+  system.autoUpgrade.allowReboot = true;
 }
