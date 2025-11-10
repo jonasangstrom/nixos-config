@@ -146,7 +146,7 @@
     pkgs.tmux
 	pkgs.yazi
     pkgs.wget
-    pkgs.rofi-wayland
+    pkgs.rofi
     pkgs.fastfetch
     pkgs.git
     pkgs.zoxide

@@ -3,7 +3,7 @@
 
   inputs = {
     nixpkgs.url = "github:nixos/nixpkgs?ref=nixos-unstable";
-    nvim.url = "nvim/";
+    nvim.url = "github:jonasangstrom/nixvim";
   };
 
   outputs = { nixpkgs, nvim, ... } @ inputs: {
