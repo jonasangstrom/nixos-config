@@ -65,10 +65,8 @@
   services = {
   # Enable the X11 windowing system.
 
-      displayManager.sddm = {
+      displayManager.gdm = {
 	    enable = true;
-	    theme = "catppuccin-mocha";
-	    package = pkgs.kdePackages.sddm;
 	    };
     xserver = {
       enable = true;
@@ -126,8 +124,8 @@
     fish.enable = true;
 	steam.enable = true;
     hyprland = {
-	enable=true;
-	xwayland.enable=true;
+	  enable=true;
+	  xwayland.enable=true;
     };
   };
 
@@ -163,13 +161,13 @@
     pkgs.wezterm
 	pkgs.freecad-wayland
     (
-    pkgs.catppuccin-sddm.override {
-	flavor = "mocha";
-	font  = "Noto Sans";
-	fontSize = "9";
-	background = "${./../../wallpaper.jpg}";
-	loginBackground = true;
-    }
+          pkgs.catppuccin-sddm.override {
+          flavor = "mocha";
+          font  = "Noto Sans";
+          fontSize = "9";
+          background = "${./../../wallpaper.jpg}";
+          loginBackground = true;
+        }
     )
 	#pkgs.kdePackages.qtmultimedia
   ];
