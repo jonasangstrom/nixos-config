@@ -49,6 +49,7 @@
 
   hardware = {
     nvidia.modesetting.enable=true;
+    graphics.enable32Bit=true;
   };
 
   hardware.graphics = {
@@ -141,7 +142,7 @@
     nvim.packages.x86_64-linux.default
 	pkgs.wl-clipboard
     pkgs.spotify
-    pkgs.tmux
+    pkgs.htop
 	pkgs.yazi
     pkgs.wget
     pkgs.rofi
