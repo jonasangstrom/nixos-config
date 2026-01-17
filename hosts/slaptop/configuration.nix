@@ -5,13 +5,7 @@
 { config, pkgs, nvim, ... }:
 
 {
-  imports =
-    [ 
-	./hardware-configuration.nix
-	./../../nixModules/base.nix
-    ];
-
-  
+  imports = [ ./hardware-configuration.nix ./../../nixModules/base.nix ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -27,7 +21,7 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = ["nix-command" "flakes"];
+  nix.settings.experimental-features = [ "nix-command" "flakes" ];
 
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
@@ -48,8 +42,8 @@
   };
 
   hardware = {
-    nvidia.modesetting.enable=true;
-    graphics.enable32Bit=true;
+    nvidia.modesetting.enable = true;
+    graphics.enable32Bit = true;
   };
 
   hardware.graphics = {
@@ -62,25 +56,22 @@
     ];
   };
 
-
   services = {
-  # Enable the X11 windowing system.
+    # Enable the X11 windowing system.
 
-      displayManager.gdm = {
-	    enable = true;
-	    };
+    displayManager.gdm = { enable = true; };
     xserver = {
       enable = true;
 
-	    #displayManager.gdm.enable = true;
-	    #windowManager.qtile.enable = true;
+      #displayManager.gdm.enable = true;
+      #windowManager.qtile.enable = true;
 
-    # Configure keymap in X11
+      # Configure keymap in X11
       xkb = {
         layout = "se";
         variant = "";
       };
-	    #resolutions = [{x=1920; y=1080;}];
+      #resolutions = [{x=1920; y=1080;}];
     };
   };
 
@@ -113,9 +104,10 @@
     isNormalUser = true;
     description = "jonas";
     extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs; [
-    #  thunderbird
-    ];
+    packages = with pkgs;
+      [
+        #  thunderbird
+      ];
   };
 
   # Install firefox.
@@ -123,13 +115,12 @@
   programs = {
     firefox.enable = true;
     fish.enable = true;
-	steam.enable = true;
+    steam.enable = true;
     hyprland = {
-	  enable=true;
-	  xwayland.enable=true;
+      enable = true;
+      xwayland.enable = true;
     };
   };
-
 
   security.polkit.enable = true;
 
@@ -138,12 +129,12 @@
 
   # List packages installed in system profile. To search, run:
   # $ nix search wget
-  environment.systemPackages =  [
+  environment.systemPackages = [
     nvim.packages.x86_64-linux.default
-	pkgs.wl-clipboard
+    pkgs.wl-clipboard
     pkgs.spotify
     pkgs.htop
-	pkgs.yazi
+    pkgs.yazi
     pkgs.wget
     pkgs.rofi
     pkgs.fastfetch
@@ -160,21 +151,17 @@
     pkgs.waybar
     pkgs.hyprpaper
     pkgs.wezterm
-	pkgs.freecad-wayland
-    (
-          pkgs.catppuccin-sddm.override {
-          flavor = "mocha";
-          font  = "Noto Sans";
-          fontSize = "9";
-          background = "${./../../wallpaper.jpg}";
-          loginBackground = true;
-        }
-    )
-	#pkgs.kdePackages.qtmultimedia
+    pkgs.freecad-wayland
+    (pkgs.catppuccin-sddm.override {
+      flavor = "mocha";
+      font = "Noto Sans";
+      fontSize = "9";
+      background = "${./../../wallpaper.jpg}";
+      loginBackground = true;
+    })
+    #pkgs.kdePackages.qtmultimedia
   ];
-  fonts.packages = with pkgs; [
-    nerd-fonts.sauce-code-pro
-  ];
+  fonts.packages = with pkgs; [ nerd-fonts.sauce-code-pro ];
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user session.
@@ -185,7 +172,7 @@
   # };
 
   # List services that you want to enable:
-    #services.picom.enable = true;
+  #services.picom.enable = true;
 
   # Enable the OpenSSH daemon.
   # services.openssh.enable = true;
