@@ -2,10 +2,18 @@
 # your system.  Help is available in the configuration.nix(5) man page
 # and in the NixOS manual (accessible by running ‘nixos-help’).
 
-{ config, pkgs, nvim, ... }:
+{
+  config,
+  pkgs,
+  nvim,
+  ...
+}:
 
 {
-  imports = [ ./hardware-configuration.nix ./../../nixModules/base.nix ];
+  imports = [
+    ./hardware-configuration.nix
+    ./../../nixModules/base.nix
+  ];
 
   # Bootloader.
   boot.loader.systemd-boot.enable = true;
@@ -21,7 +29,10 @@
   # Enable networking
   networking.networkmanager.enable = true;
 
-  nix.settings.experimental-features = [ "nix-command" "flakes" ];
+  nix.settings.experimental-features = [
+    "nix-command"
+    "flakes"
+  ];
 
   # Set your time zone.
   time.timeZone = "Europe/Stockholm";
@@ -59,7 +70,9 @@
   services = {
     # Enable the X11 windowing system.
 
-    displayManager.gdm = { enable = true; };
+    displayManager.gdm = {
+      enable = true;
+    };
     xserver = {
       enable = true;
 
@@ -103,11 +116,13 @@
   users.users.jonas = {
     isNormalUser = true;
     description = "jonas";
-    extraGroups = [ "networkmanager" "wheel" ];
-    packages = with pkgs;
-      [
-        #  thunderbird
-      ];
+    extraGroups = [
+      "networkmanager"
+      "wheel"
+    ];
+    packages = with pkgs; [
+      #  thunderbird
+    ];
   };
 
   # Install firefox.
@@ -133,8 +148,8 @@
     nvim.packages.x86_64-linux.default
     pkgs.wl-clipboard
     pkgs.spotify
+    pkgs.arduino-ide
     pkgs.htop
-    pkgs.yazi
     pkgs.wget
     pkgs.rofi
     pkgs.fastfetch
