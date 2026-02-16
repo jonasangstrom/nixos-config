@@ -151,6 +151,7 @@
     pkgs.arduino-ide
     pkgs.htop
     pkgs.wget
+    pkgs.bat
     pkgs.rofi
     pkgs.fastfetch
     pkgs.git
