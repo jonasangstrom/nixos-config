@@ -167,7 +167,7 @@
     pkgs.cmake
     pkgs.gnumake
     pkgs.fd
-    pkgs.swww
+    pkgs.awww
     pkgs.waybar
     pkgs.hyprpaper
     pkgs.wezterm
