@@ -172,6 +172,7 @@
     pkgs.hyprpaper
     pkgs.wezterm
     pkgs.freecad-wayland
+    pkgs.kdePackages.kdenlive
     (pkgs.catppuccin-sddm.override {
       flavor = "mocha";
       font = "Noto Sans";
