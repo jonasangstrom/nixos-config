@@ -632,7 +632,7 @@
     },
     "wallpaper": {
         "automationEnabled": false,
-        "directory": "/home/jonas/Pictures/Wallpapers",
+        "directory": "~/.config",
         "enableMultiMonitorDirectories": false,
         "enabled": true,
         "favorites": [
@@ -666,7 +666,7 @@
         "useOriginalImages": false,
         "useSolidColor": false,
         "useWallhaven": false,
-        "viewMode": "recursive",
+        "viewMode": "single",
         "wallhavenApiKey": "",
         "wallhavenCategories": "111",
         "wallhavenOrder": "desc",

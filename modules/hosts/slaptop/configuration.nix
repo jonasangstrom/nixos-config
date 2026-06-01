@@ -62,17 +62,16 @@
       services = {
         # Enable the X11 windowing system.
 
-        displayManager.sddm = {
+        displayManager.ly = {
           enable = true;
-          wayland.enable = true;
+          settings = {
+            bigclock = true;
+            animate = true;
+            animation = 0;
+          };
         };
         xserver = {
           enable = true;
-
-          #displayManager.gdm.enable = true;
-          #windowManager.qtile.enable = true;
-
-          # Configure keymap in X11
           xkb = {
             layout = "se";
             variant = "";
@@ -110,7 +109,7 @@
       nix.gc = {
         automatic = true;
         dates = "daily";
-        options = "--delete-older-than 30d";
+        options = "--delete-older-than 15d";
       };
 
       nix.settings.auto-optimise-store = true;
@@ -119,10 +118,6 @@
         firefox.enable = true;
         fish.enable = true;
         steam.enable = true;
-        hyprland = {
-          enable = false;
-          xwayland.enable = false;
-        };
       };
 
       security.polkit.enable = true;
@@ -151,7 +146,6 @@
         pkgs.fd
         pkgs.awww
         pkgs.waybar
-        pkgs.hyprpaper
         pkgs.wezterm
         pkgs.freecad-wayland
         pkgs.kdePackages.kdenlive
