@@ -60,7 +60,7 @@
       };
 
       services = {
-        # Enable the X11 windowing system.
+        upower.enable = true;
 
         displayManager.ly = {
           enable = true;
