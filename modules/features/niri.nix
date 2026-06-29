@@ -43,18 +43,13 @@
 
               "Mod+H".focus-column-left = { };
               "Mod+L".focus-column-right = { };
-              "Mod+J".focus-window-down = { };
-              "Mod+K".focus-window-up = { };
+              "Mod+J".focus-workspace-down = { };
+              "Mod+K".focus-workspace-up = { };
 
-              "Mod+Ctrl+Left".move-column-left = { };
-              "Mod+Ctrl+Right".move-column-right = { };
-              "Mod+Ctrl+Down".move-window-down = { };
-              "Mod+Ctrl+Up".move-window-up = { };
-
-              "Mod+Page_Down".focus-workspace-down = { };
-              "Mod+Page_Up".focus-workspace-up = { };
-              "Mod+Ctrl+Page_Down".move-column-to-workspace-down = { };
-              "Mod+Ctrl+Page_Up".move-column-to-workspace-up = { };
+              "Mod+Ctrl+L".move-column-left = { };
+              "Mod+Ctrl+R".move-column-right = { };
+              "Mod+Ctrl+J".move-column-to-workspace-down = { };
+              "Mod+Ctrl+K".move-column-to-workspace-up = { };
 
               "Mod+F".maximize-column = { };
               "Mod+Shift+F".fullscreen-window = { };
