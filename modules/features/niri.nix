@@ -23,7 +23,7 @@
           libxrandr
           libxi
         ];
-        v2-settings = true;
+        # v2-settings = true;
         settings =
           let
             noctaliaExe = pkgs.lib.getExe self.packages.${pkgs.stdenv.hostPlatform.system}.myNoctalia;
@@ -37,7 +37,7 @@
             };
             layout.gaps = 5;
             binds = {
-              "Mod+R".spawn-sh = "${noctaliaExe} ipc call launcher toggle";
+              "Mod+R".spawn-sh = "${noctaliaExe} msg panel-toggle launcher";
               "Mod+Return".spawn-sh = lib.getExe pkgs.wezterm;
               "Mod+C".close-window = { };
 
