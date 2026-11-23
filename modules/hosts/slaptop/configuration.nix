@@ -127,6 +127,7 @@
 
       environment.systemPackages = [
         inputs.nvim.packages.x86_64-linux.default
+        pkgs.orca-slicer
         pkgs.wl-clipboard
         pkgs.spotify
         pkgs.arduino-ide
